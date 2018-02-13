@@ -15,6 +15,10 @@ __* No longer maintained__
 	$this->breadcrumbs->push('Section', '/section');
 	$this->breadcrumbs->push('Page', '/section/page');
 
+	// add breadcrumbs by array
+	$this->breadcrumbs->push_by_array(['/section' => 'Section']);
+	$this->breadcrumbs->push_by_array(['/section/page' => 'Page']);
+
 	// unshift crumb
 	$this->breadcrumbs->unshift('Home', '/');
 

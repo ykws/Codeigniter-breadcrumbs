@@ -66,6 +66,26 @@ class Breadcrumbs {
 	// --------------------------------------------------------------------
 
 	/**
+	 * Append crumb to stack by array
+	 *
+	 * @access	public
+	 * @param	array $meta
+	 * @return	void
+	 */
+	function push_by_array($meta)
+	{
+		$key = key($meta);
+
+		// Prepend site url
+		$href = site_url($key);
+
+		// push breadcrumb
+		$this->breadcrumbs[$href] = array('page' => $meta[$key], 'href' => $href);
+	}
+
+	// --------------------------------------------------------------------
+
+	/**
 	 * Prepend crumb to stack
 	 *
 	 * @access	public
