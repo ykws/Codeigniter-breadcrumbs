@@ -82,7 +82,7 @@ class Breadcrumbs {
 		$href = site_url($href);
 		
 		// add at firts
-		array_unshift($this->breadcrumbs, array('page' => $page, 'href' => $href));
+		$this->breadcrumbs = array($href => array('page' => $page, 'href' => $href)) + $this->breadcrumbs;
 	}
 	
 	// --------------------------------------------------------------------
